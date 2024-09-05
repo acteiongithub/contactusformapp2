@@ -98,6 +98,8 @@ app.get('/api/contacts', (req, res) => {
     });
 });
 
-app.listen(port, () => {
-    console.log(`Server running on http://localhost:${port}`);
+const server = http.createServer(app);
+
+server.listen(3000, () => {
+  console.log('Server is running on http://localhost:3000');
 });
